@@ -6,7 +6,9 @@ machine:
 
 dependencies:
   pre:
-    - sudo pip install docker-compose
+    - sudo curl -L --fail https://github.com/docker/compose/releases/download/1.13.0/run.sh > /tmp/docker-compose
+    - sudo cp /tmp/docker-compose /usr/local/bin/
+    - sudo chmod +x /usr/local/bin/docker-compose
 
 test:
   override:
