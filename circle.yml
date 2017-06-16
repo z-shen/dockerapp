@@ -8,7 +8,7 @@ dependencies:
   pre:
     - sudo curl -L --fail https://github.com/docker/compose/releases/download/1.13.0/run.sh > /tmp/docker-compos
     - sudo cp /tmp/docker-compose /usr/local/bin/
-   - sudo chmod +x /usr/local/bin/docker-compose
+    - sudo chmod +x /usr/local/bin/docker-compose
 test:
   override:
     - docker-compose up -d
